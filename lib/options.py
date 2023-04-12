@@ -11,6 +11,8 @@ def args_parser():
     # federated arguments (Notation for the arguments followed from paper)
     parser.add_argument('--rounds', type=int, default=20,
                         help="number of rounds of training")
+    parser.add_argument('--classes_list', type=list, default=[[0,1,2],[3,4,5],[6,7,8],[9,10,11]],
+                        help="classes_list")
     parser.add_argument('--num_users', type=int, default=11,
                         help="number of users: K")
     parser.add_argument('--num_classes', type=int, default=13, help="number \
