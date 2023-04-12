@@ -550,7 +550,7 @@ def cifar100_noniid(args, dataset, num_users, n_list, k_list, classes_list):
 
     ## classes_list
     
-    classes_list = classes_list # [[0,1,2,3,4],[5,6,7,8,9],[10,11,12,13,14], [15,16,17,18,19]]
+    classes_list = args.classes_list 
     for i in range(num_users):
         n = n_list[i]
         k = k_list[i]
