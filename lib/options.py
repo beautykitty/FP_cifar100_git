@@ -3,6 +3,13 @@
 # Python version: 3.6
 
 import argparse
+import ast
+
+def arg_as_list(s):
+  v = ast.literal_eval(s)
+  return v
+
+
 
 
 def args_parser():
@@ -11,7 +18,7 @@ def args_parser():
     # federated arguments (Notation for the arguments followed from paper)
     parser.add_argument('--rounds', type=int, default=20,
                         help="number of rounds of training")
-    parser.add_argument('--classes_list', type=list, default=[[0,1,2],[3,4,5],[6,7,8],[9,10,11]],
+    parser.add_argument('--classes_list', type=arg_as_list, default=[[0,1,2],[3,4,5],[6,7,8],[9,10,11]],
                         help="classes_list")
     parser.add_argument('--num_users', type=int, default=4,
                         help="number of users: K")
