@@ -189,11 +189,12 @@ if __name__ == '__main__':
 
     ## class_list 추가
     #classes_list = [[0,1,2], [1,2,3],[2,3,4], [3,4,0], [0,1,4]]
-    classes_list =[[0,1,3,8],[0,1,3,8], 
-                   [0,1,4,9],[0,1,4,9], 
-                   [0,1,5,10],[0,2,5,10],
-                   [0,2,5,10], [0,2,6,11],
-                   [0,2,6,11], [0,2,7,12],[0,2,7,12]]
+    classes_list =args.classes_list
+#                    [[0,1,3,8],[0,1,3,8], 
+#                    [0,1,4,9],[0,1,4,9], 
+#                    [0,1,5,10],[0,2,5,10],
+#                    [0,2,5,10], [0,2,6,11],
+#                    [0,2,6,11], [0,2,7,12],[0,2,7,12]]
     
     #train_dataset, test_dataset, user_groups, user_groups_lt, classes_list = get_dataset(args, n_list, k_list, all_class_list)
     train_dataset, test_dataset, user_groups, user_groups_lt, classes_list = get_dataset(args, n_list, k_list, classes_list)
